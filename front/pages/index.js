@@ -4,7 +4,7 @@ import Applayout from '../Components/Applayout';
 const Home = () =>{
     return(
         <Applayout>
-            <div>Hello, Next!</div>
+            <div>Hello, Next</div>
         </Applayout>
     )
 }

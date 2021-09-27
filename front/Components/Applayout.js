@@ -10,6 +10,7 @@ const Applayout = ({children}) =>{
             <link href = "/profile"><a>프로필</a></link>
             <link href = "/signup"><a>회원가입</a></link>
             {children}
+            
         </div>
     )
 };
