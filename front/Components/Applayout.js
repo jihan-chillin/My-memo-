@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import Link from "next/dist/client/link";
 import { Menu, Input, Row, Col } from "antd"; // Row, Col : 반응형 그리드
+
+import UserProfile from '../Components/UserProfile';
+import LoginForm from '../Components/LoginForm';
+
 import 'antd/dist/antd.css'
 
 const Applayout = ({children}) =>{
+
+    // 서버 연결 전 로그인 dummy data
+    const [isLoggedin, setisLoggedin] = useState(false);
+
     return(
         <div>
             {/* antd로부터 menu템플릿 이용 */}
@@ -30,7 +38,7 @@ const Applayout = ({children}) =>{
             {/* gutter : 간격 */}
             <Row gutter={8}>
                 <Col xs={24} md={6}>
-                    왼쪽 메뉴    
+                    {isLoggedin ? <UserProfile/> : <LoginForm/>}  
                 </Col>
                 <Col xs={24} md={12}>
                     {children}
