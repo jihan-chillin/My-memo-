@@ -1,7 +1,6 @@
 {
   "polyfillFiles": [
     "static/chunks/polyfills.js"
-    
   ],
   "devFiles": [
     "static/chunks/react-refresh.js"
@@ -15,6 +14,11 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
+    "/": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
@@ -24,6 +28,16 @@
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
+    ],
+    "/profile": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/profile.js"
+    ],
+    "/signup": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/signup.js"
     ]
   },
   "ampFirstPages": []
