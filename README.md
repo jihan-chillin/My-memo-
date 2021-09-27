@@ -1,4 +1,4 @@
-# React-SNS
+# React로 SNS사이트를 만들어보자! 
 
 직접
 React와 Next.js를 활용해, 
