@@ -9,6 +9,9 @@ React와 Next.js를 활용해,
 - React
 - Next.js
 - antd / styled-component
+
+#### ⚓ Back-end
+- node.js
 -----------------------------
 ### How to run 
     npm run dev
