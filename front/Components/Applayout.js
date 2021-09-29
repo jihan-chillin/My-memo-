@@ -37,16 +37,20 @@ const Applayout = ({children}) =>{
 
             {/* gutter : 간격 */}
             <Row gutter={8}>
+
                 <Col xs={24} md={6}>
                     {isLoggedin ? <UserProfile/> : <LoginForm/>}  
                 </Col>
+
                 <Col xs={24} md={12}>
                     {children}
                 </Col>
+
                 <Col xs={24} md={6}>
                     {/* target="_blank" : 새 페이지를 여는데, 보안문제가 있기 때문에 항상 rel noreferrer noopener를 작성 */}
                     <a href="https://github.com/jihan-chillin/React-SNS" target="_blank" rel="noreferrer noopener">Made by jihan</a>
                 </Col>
+                
             </Row>
            
         </div>
