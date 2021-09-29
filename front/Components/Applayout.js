@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import Link from "next/dist/client/link";
 import { Menu, Input, Row, Col } from "antd"; // Row, Col : 반응형 그리드
-
+import styled from "styled-components";
 import UserProfile from '../Components/UserProfile';
 import LoginForm from '../Components/LoginForm';
 
 import 'antd/dist/antd.css'
 
+const SearchInput = styled(input.Search)`
+    verticalAlign : middle
+`;
 const Applayout = ({children}) =>{
 
     // 서버 연결 전 로그인 dummy data
@@ -24,7 +27,7 @@ const Applayout = ({children}) =>{
                      <Link href = "/profile"><a>프로필</a></Link>
                 </Menu.Item>
                 <Menu.Item>
-                     <Input.Search style={{ verticalAlign : 'middle'}} enterButton/>
+                     <SearchInput enterButton/>
                 </Menu.Item>
                 <Menu.Item>
                     <Link href = "/signup"><a>회원가입</a></Link>
@@ -50,7 +53,7 @@ const Applayout = ({children}) =>{
                     {/* target="_blank" : 새 페이지를 여는데, 보안문제가 있기 때문에 항상 rel noreferrer noopener를 작성 */}
                     <a href="https://github.com/jihan-chillin/React-SNS" target="_blank" rel="noreferrer noopener">Made by jihan</a>
                 </Col>
-                
+
             </Row>
            
         </div>
