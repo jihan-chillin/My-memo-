@@ -8,7 +8,7 @@ React와 Next.js를 활용해,
 #### ✨ Front-end
 - React
 - Next.js
-- antd / styled-component
+- antd ( 디자인 파트 )
 
 #### ⚓ Back-end
 - node.js
