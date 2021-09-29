@@ -8,13 +8,13 @@ import LoginForm from '../Components/LoginForm';
 
 import 'antd/dist/antd.css'
 
-const SearchInput = styled(input.Search)`
+const SearchInput = styled(Input.Search)`
     verticalAlign : middle
 `;
 const Applayout = ({children}) =>{
 
     // 서버 연결 전 로그인 dummy data
-    const [isLoggedin, setisLoggedin] = useState(false);
+    const [isLoggedin, SetIsLoggedIn] = useState(false);
 
     return(
         <div>
@@ -42,7 +42,7 @@ const Applayout = ({children}) =>{
             <Row gutter={8}>
 
                 <Col xs={24} md={6}>
-                    {isLoggedin ? <UserProfile/> : <LoginForm/>}  
+                    {isLoggedin ? <UserProfile SetIsLoggedIn = {SetIsLoggedIn}/> : <LoginForm SetIsLoggedIn={SetIsLoggedIn}/>}  
                 </Col>
 
                 <Col xs={24} md={12}>

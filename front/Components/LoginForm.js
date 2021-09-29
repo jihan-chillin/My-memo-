@@ -8,8 +8,11 @@ import styled from 'styled-components';
 const ButtonWrapper = styled.div`
     marginTop : 10px;
 `
+const FormWrapper = styled(Form)`
+    padding : 10px
+`;
 
-const LoginForm = () =>{
+const LoginForm = ({SetIsLoggedIn}) =>{
     const [id, setId] = useState('');
     const [password, setPassword ] = useState('');
 
@@ -24,8 +27,15 @@ const LoginForm = () =>{
 
     const style = useMemo(()=> ({ marginTop : 10 }), [] )
 
+    const onSubmitForm = useCallback(()=>{
+        console.log(id, password);
+        // Applayout에서 dummy 불러옴
+        SetIsLoggedIn(true);
+    }, [id, password]);
+
+    // return 부분 : virtual Dom 부분
     return (
-        <Form>
+        <FormWrapper onFinish={onSubmitForm}>
             <div>
                 <label htmlFor="user-id">아이디</label>
                 <br/>
@@ -42,7 +52,7 @@ const LoginForm = () =>{
                 <Button type="primary" htmlType="submit" loading={false}>로그인</Button>
                 <Link href="/signup"><a><Button>회원가입</Button></a></Link>
             </ButtonWrapper>
-        </Form>
+        </FormWrapper>
     );
 }
 
