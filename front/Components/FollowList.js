@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const FollowList = ({ header, data }) => (
   <List
-    style={{ marginBottom: '20px' }}
+    style={{ marginBottom: 20 }}
     grid={{ gutter: 4, xs: 2, md: 3 }}
     size="small"
     header={<div>{header}</div>}

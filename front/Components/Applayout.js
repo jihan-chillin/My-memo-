@@ -20,16 +20,16 @@ const Applayout = ({children}) =>{
         <div>
             {/* antd로부터 menu템플릿 이용 */}
             <Menu mode="horizontal">
-                <Menu.Item>
+                <Menu.Item key="node">
                     <Link href = "/"><a>노드버드</a></Link>
                 </Menu.Item>
-                <Menu.Item>
+                <Menu.Item key="profile">
                      <Link href = "/profile"><a>프로필</a></Link>
                 </Menu.Item>
-                <Menu.Item>
+                <Menu.Item key="enter-btn">
                      <SearchInput enterButton/>
                 </Menu.Item>
-                <Menu.Item>
+                <Menu.Item key="signup">
                     <Link href = "/signup"><a>회원가입</a></Link>
                 </Menu.Item>
             </Menu>
@@ -42,7 +42,8 @@ const Applayout = ({children}) =>{
             <Row gutter={8}>
 
                 <Col xs={24} md={6}>
-                    {isLoggedin ? <UserProfile SetIsLoggedIn = {SetIsLoggedIn}/> : <LoginForm SetIsLoggedIn={SetIsLoggedIn}/>}  
+                    {/* {SearchisLoggedin ? <UserProfile SetIsLoggedIn = {SetIsLoggedIn}/> : <LoginForm SetIsLoggedIn={SetIsLoggedIn}/>}   */}
+                    {SetIsLoggedIn ? <UserProfile SetIsLoggedIn = {SetIsLoggedIn}/> : <LoginForm SetIsLoggedIn = {SetIsLoggedIn}/>}
                 </Col>
 
                 <Col xs={24} md={12}>

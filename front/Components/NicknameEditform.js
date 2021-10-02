@@ -11,9 +11,9 @@ const NicknameEditForm = () =>{
     }),[]);
 
     return(
-        <Form style={style}>
-            <input.Search addonBefore="닉네임" enterButton="수정"/>
-        </Form>
+       <Form style={style}>
+           <Input.Search addonBefore="닉네임" enterButton="수정"/>
+       </Form>
     )
 };
 
