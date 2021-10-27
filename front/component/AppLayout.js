@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // next.js의 자체적인 router
 import Link from 'next/link';
-import {Menu} from 'antd'
+import {Menu} from 'antd';
+
 
 const AppLayout = ({ children }) => {
     return(
@@ -18,12 +19,8 @@ const AppLayout = ({ children }) => {
                     <Link href="signup"><a>회원가입</a></Link>
                 </Menu.Item>
            </Menu>
-           <div>
                {children}
-           </div>
         </div>
-
-        
     )
 }
 
