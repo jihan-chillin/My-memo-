@@ -44,7 +44,7 @@ const LoginForm = ({SetIsLoggedIn}) =>{
     );
 }
 
-LoginForm.porpTypes ={
+LoginForm.propTypes ={
     SetIsLoggedIn : PropTypes.func.isRequired,
 };
 
